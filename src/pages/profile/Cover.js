@@ -126,8 +126,12 @@ export default function Cover({ cover, visitor, photos }) {
             >
               Cancel
             </button>
-            <button className="blue_btn " onClick={() => updateCoverPicture()}>
-              {loading ? <PulseLoader color="#fff" size={5} /> : "Save changes"}
+            <button
+              className="blue_btn "
+              onClick={() => updateCoverPicture()}
+              style={{ backgroundColor: "#ff5500" }}
+            >
+              {loading ? <PulseLoader color="#ff5500" size={5} /> : "Save"}
             </button>
           </div>
         </div>
@@ -172,17 +176,17 @@ export default function Cover({ cover, visitor, photos }) {
             onClick={() => setShowCoverMenu((prev) => !prev)}
           >
             <i className="camera_filled_icon"></i>
-            Add Cover Photo
+            Cover Photo
           </div>
           {showCoverMneu && (
             <div className="open_cover_menu" ref={menuRef}>
-              <div
+              {/* <div
                 className="open_cover_menu_item hover1"
                 onClick={() => setShow(true)}
               >
                 <i className="photo_icon"></i>
                 Select Photo
-              </div>
+              </div> */}
               <div
                 className="open_cover_menu_item hover1"
                 onClick={() => refInput.current.click()}

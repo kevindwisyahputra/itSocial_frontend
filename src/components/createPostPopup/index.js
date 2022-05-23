@@ -123,7 +123,7 @@ export default function CreatePostPopup({
           >
             <i className="exit_icon"></i>
           </div>
-          <span>Create Post</span>
+          <span>Post</span>
         </div>
         <div className="box_profile">
           <img src={user.picture} alt="" className="box_profile_img" />
@@ -165,6 +165,7 @@ export default function CreatePostPopup({
         <AddToYourPost setShowPrev={setShowPrev} />
         <button
           className="post_submit"
+          style={{ backgroundColor: "#ff5500" }}
           onClick={() => {
             postSubmit();
           }}

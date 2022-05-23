@@ -12,7 +12,7 @@ export default function CreatePost({ user, setVisible, profile }) {
             setVisible(true);
           }}
         >
-          What's on your mind, {user?.first_name}
+          Make a new post, {user?.first_name}
         </div>
       </div>
       <div className="create_splitter"></div>

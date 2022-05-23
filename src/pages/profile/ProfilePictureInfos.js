@@ -69,12 +69,15 @@ export default function ProfielPictureInfos({
         <Friendship friendshipp={profile?.friendship} profileid={profile._id} />
       ) : (
         <div className="profile_w_right">
-          <div className="blue_btn">
-            <img src="../../../icons/plus.png" alt="" className="invert" />
+          <div className="blue_btn" style={{ backgroundColor: "#ff5500" }}>
+            {/* <img src="../../../icons/plus.png" alt="" className="invert" /> */}
             <span>Add to story</span>
           </div>
-          <div className="gray_btn">
-            <i className="edit_icon"></i>
+          <div
+            className="gray_btn"
+            style={{ backgroundColor: "#ff5500", color: "white" }}
+          >
+            {/* <i className="edit_icon"></i> */}
             <span>Edit profile</span>
           </div>
         </div>

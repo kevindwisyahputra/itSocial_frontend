@@ -9,26 +9,24 @@ export default function ProfileMenu() {
           Posts
         </Link>
         <Link to="/" className="hover1">
-          About
+          {/* About */}
         </Link>
         <Link to="/" className="hover1">
-          Friends
+          {/* Friends */}
         </Link>
         <Link to="/" className="hover1">
-          Photos
+          {/* Photos */}
         </Link>
         <Link to="/" className="hover1">
-          Videos
+          {/* Videos */}
         </Link>
         <Link to="/" className="hover1">
-          Check-ins
+          {/* Check-ins */}
         </Link>
         <Link to="/" className="hover1">
-          More
+          {/* More */}
         </Link>
-        <div className="p10_dots">
-          <Dots />
-        </div>
+        {/* <div className="p10_dots"><Dots /></div> */}
       </div>
     </div>
   );

@@ -46,26 +46,24 @@ export default function RegisterForm({ setVisible }) {
   const days = Array.from(new Array(getDays()), (val, index) => 1 + index);
   const registerValidation = Yup.object({
     first_name: Yup.string()
-      .required("What's your First name ?")
-      .min(2, "Fisrt name must be between 2 and 16 characters.")
-      .max(16, "Fisrt name must be between 2 and 16 characters.")
+      .required("Put your firstname!")
+      .min(2, "Firstname must between 2 - 16 characters")
+      .max(16, "Firstname must between 2 - 16 characters")
       .matches(/^[aA-zZ]+$/, "Numbers and special characters are not allowed."),
     last_name: Yup.string()
-      .required("What's your Last name ?")
-      .min(2, "Last name must be between 2 and 16 characters.")
-      .max(16, "Last name must be between 2 and 16 characters.")
+      .required("Put your lastname!")
+      .min(2, "Lastname must between 2 - 16 characters")
+      .max(16, "Lastname must between 2 - 16 characters.")
       .matches(/^[aA-zZ]+$/, "Numbers and special characters are not allowed."),
     email: Yup.string()
-      .required(
-        "You'll need this when you log in and if you ever need to reset your password."
-      )
-      .email("Enter a valid email address."),
+      .required("Put your email!")
+      .email("Enter a valid email address"),
     password: Yup.string()
       .required(
-        "Enter a combination of at least six numbers,letters and punctuation marks(such as ! and &)."
+        "Enter a combination of at least eight numbers,letters and punctuation marks(such as ! and &)."
       )
-      .min(6, "Password must be atleast 6 characters.")
-      .max(36, "Password can't be more than 36 characters"),
+      .min(8, "Password must be atleast 8 characters.")
+      .max(30, "Password can't be more than 30 characters"),
   });
   const [dateError, setDateError] = useState("");
   const [genderError, setGenderError] = useState("");
@@ -109,7 +107,7 @@ export default function RegisterForm({ setVisible }) {
         <div className="register_header">
           <i className="exit_icon" onClick={() => setVisible(false)}></i>
           <span>Sign Up</span>
-          <span>it's quick and easy</span>
+          <span style={{ color: "#ff5500" }}>itSocial</span>
         </div>
         <Formik
           enableReinitialize
@@ -131,17 +129,15 @@ export default function RegisterForm({ setVisible }) {
             let noMoreThan70 = new Date(1970 + 70, 0, 1);
             if (current_date - picked_date < atleast14) {
               setDateError(
-                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth."
+                "Please make sure that you use your real date of birth!"
               );
             } else if (current_date - picked_date > noMoreThan70) {
               setDateError(
-                "it looks like you(ve enetered the wrong info.Please make sure that you use your real date of birth."
+                "Please make sure that you use your real date of birth!"
               );
             } else if (gender === "") {
               setDateError("");
-              setGenderError(
-                "Please choose a gender. You can change who can see this later."
-              );
+              setGenderError("Please choose a gender!");
             } else {
               setDateError("");
               setGenderError("");
@@ -160,7 +156,7 @@ export default function RegisterForm({ setVisible }) {
                 />
                 <RegisterInput
                   type="text"
-                  placeholder="Surname"
+                  placeholder="Last name"
                   name="last_name"
                   onChange={handleRegisterChange}
                 />
@@ -168,7 +164,7 @@ export default function RegisterForm({ setVisible }) {
               <div className="reg_line">
                 <RegisterInput
                   type="text"
-                  placeholder="Mobile number or email address"
+                  placeholder="Email address"
                   name="email"
                   onChange={handleRegisterChange}
                 />
@@ -207,13 +203,18 @@ export default function RegisterForm({ setVisible }) {
                 />
               </div>
               <div className="reg_infos">
-                By clicking Sign Up, you agree to our{" "}
+                {/* By clicking Sign Up, you agree to our{" "}
                 <span>Terms, Data Policy &nbsp;</span>
                 and <span>Cookie Policy.</span> You may receive SMS
-                notifications from us and can opt out at any time.
+                notifications from us and can opt out at any time. */}
               </div>
               <div className="reg_btn_wrapper">
-                <button className="blue_btn open_signup">Sign Up</button>
+                <button
+                  className="blue_btn open_signup"
+                  style={{ backgroundColor: "#ff5500" }}
+                >
+                  Sign Up
+                </button>
               </div>
               <DotLoader color="#1876f2" loading={loading} size={30} />
               {error && <div className="error_text">{error}</div>}

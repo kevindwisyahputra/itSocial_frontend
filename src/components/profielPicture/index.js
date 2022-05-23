@@ -53,9 +53,10 @@ export default function ProfilePicture({ username, setShow, pRef, photos }) {
           <div className="update_picture_buttons">
             <button
               className="light_blue_btn"
+              style={{ backgroundColor: "#ff5500", color: "white" }}
               onClick={() => refInput.current.click()}
             >
-              <i className="plus_icon filter_blue"></i>
+              <i className="filter_blue"></i>
               Upload photo
             </button>
             <button className="gray_btn">

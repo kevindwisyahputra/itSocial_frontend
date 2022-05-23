@@ -51,10 +51,10 @@ export default function LoginForm({ setVisible }) {
   return (
     <div className="login_wrap">
       <div className="login_1">
-        <img src="../../icons/facebook.svg" alt="" />
-        <span>
+        <img src="../../icons/soundcloud.png" alt="" />
+        {/* <span>
           Facebook helps you connect and share with the people in your life.
-        </span>
+        </span> */}
       </div>
       <div className="login_2">
         <div className="login_2_wrap">
@@ -74,7 +74,7 @@ export default function LoginForm({ setVisible }) {
                 <LoginInput
                   type="text"
                   name="email"
-                  placeholder="Email address or phone number"
+                  placeholder="Email address"
                   onChange={handleLoginChange}
                 />
                 <LoginInput
@@ -84,14 +84,18 @@ export default function LoginForm({ setVisible }) {
                   onChange={handleLoginChange}
                   bottom
                 />
-                <button type="submit" className="blue_btn">
+                <button
+                  type="submit"
+                  className="blue_btn"
+                  style={{ backgroundColor: "#ff5500" }}
+                >
                   Log In
                 </button>
               </Form>
             )}
           </Formik>
           <Link to="/reset" className="forgot_password">
-            Forgotten password?
+            Forgot Password?
           </Link>
           <DotLoader color="#1876f2" loading={loading} size={30} />
 
@@ -100,13 +104,14 @@ export default function LoginForm({ setVisible }) {
           <button
             className="blue_btn open_signup"
             onClick={() => setVisible(true)}
+            style={{ backgroundColor: "#ff5500" }}
           >
             Create Account
           </button>
         </div>
-        <Link to="/" className="sign_extra">
+        {/* <Link to="/" className="sign_extra">
           <b>Create a Page</b> for a celebrity, brand or business.
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

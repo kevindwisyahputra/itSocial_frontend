@@ -9,21 +9,21 @@ export default function LeftHome({ user }) {
   const [visible, setVisible] = useState(false);
   return (
     <div className="left_home scrollbar">
-      <Link to="/profile" className="left_link hover2">
+      {/* <Link to="/profile" className="left_link hover2">
         <img src={user?.picture} alt="" />
         <span>
           {user?.first_name} {user.last_name}
         </span>
-      </Link>
-      {left.slice(0, 8).map((link, i) => (
+      </Link> */}
+      {/* {left.slice(0, 8).map((link, i) => (
         <LeftLink
           key={i}
           img={link.img}
           text={link.text}
           notification={link.notification}
         />
-      ))}
-      {!visible && (
+      ))} */}
+      {/* {!visible && (
         <div
           className="left_link hover2"
           onClick={() => {
@@ -35,8 +35,8 @@ export default function LeftHome({ user }) {
           </div>
           <span>See more</span>
         </div>
-      )}
-      {visible && (
+      )} */}
+      {/* {visible && (
         <div className="more_left">
           {left.slice(8, left.length).map((link, i) => (
             <LeftLink
@@ -58,27 +58,27 @@ export default function LeftHome({ user }) {
             <span>Show less</span>
           </div>
         </div>
-      )}
-      <div className="splitter"></div>
+      )} */}
+      {/* <div className="splitter"></div> */}
       <div className="shortcut">
-        <div className="heading">Your Shortcuts</div>
+        <div className="heading">Another info</div>
         <div className="edit_shortcut">Edit</div>
       </div>
       <div className="shortcut_list">
         <Shortcut
-          link="https://www.youtube.com/c/MohamedHaJJi1/featured"
+          link="https://www.youtube.com/watch?v=5qap5aO4i9A"
           img="../../images/ytb.png"
           name="My Youtube channel"
         />
 
         <Shortcut
-          link="https://www.instagram.com/med_hajji7/"
+          link="https://www.instagram.com/kevinnalbern/"
           img="../../images/insta.png"
           name="My Instagram "
         />
       </div>
       <div className={`fb_copyright ${visible && "relative_fb_copyright"}`}>
-        <Link to="/">Privacy </Link>
+        {/* <Link to="/">Privacy </Link>
         <span>. </span>
         <Link to="/">Terms </Link>
         <span>. </span>
@@ -91,7 +91,7 @@ export default function LeftHome({ user }) {
         <Link to="/"></Link>Cookies <span>. </span>
         <Link to="/">More </Link>
         <span>. </span> <br />
-        Meta © 2022
+        Meta © 2022 */}
       </div>
     </div>
   );

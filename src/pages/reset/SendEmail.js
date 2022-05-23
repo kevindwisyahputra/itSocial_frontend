@@ -28,7 +28,7 @@ export default function SendEmail({
   };
   return (
     <div className="reset_form dynamic_height">
-      <div className="reset_form_header">Reset Your Password</div>
+      <div className="reset_form_header">Reset Password</div>
       <div className="reset_grid">
         <div className="reset_left">
           <div className="reset_form_text">
@@ -55,13 +55,14 @@ export default function SendEmail({
       )}
       <div className="reset_form_btns">
         <Link to="/login" className="gray_btn">
-          Not You ?
+          Cancel
         </Link>
         <button
           onClick={() => {
             sendEmail();
           }}
           className="blue_btn"
+          style={{ backgroundColor: "#ff5500" }}
         >
           Continue
         </button>

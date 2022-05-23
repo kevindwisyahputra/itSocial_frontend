@@ -39,10 +39,7 @@ export default function SearchAccount({
   return (
     <div className="reset_form">
       <div className="reset_form_header">Find Your Account</div>
-      <div className="reset_form_text">
-        Please enter your email address or mobile number to search for your
-        account.
-      </div>
+      <div className="reset_form_text">Please enter your email address</div>
       <Formik
         enableReinitialize
         initialValues={{
@@ -59,14 +56,18 @@ export default function SearchAccount({
               type="text"
               name="email"
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Email address or phone number"
+              placeholder="Email address"
             />
             {error && <div className="error_text">{error}</div>}
             <div className="reset_form_btns">
               <Link to="/login" className="gray_btn">
                 Cancel
               </Link>
-              <button type="submit" className="blue_btn">
+              <button
+                type="submit"
+                className="blue_btn"
+                style={{ backgroundColor: "#ff5500" }}
+              >
                 Search
               </button>
             </div>

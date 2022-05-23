@@ -154,8 +154,9 @@
   height: 60px !important;
   width: 65px !important;
   margin: 0 !important;
-  color: var(--blue-color) !important;
-  border-bottom: 3px solid var(--blue-color);
+  /* color: var(--blue-color) !important; */
+  color: #ff5500 !important;
+  border-bottom: 3px solid #ff5500;
   border-radius: 0 !important;
 }
 .p10_dots {

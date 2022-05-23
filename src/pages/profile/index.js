@@ -229,7 +229,7 @@ export default function Profile({ getAllPosts }) {
       <div className="profile_bottom">
         <div className="profile_container">
           <div className="bottom_container">
-            <PplYouMayKnow />
+            {/* <PplYouMayKnow /> */}
             <div
               className={`profile_grid ${
                 check && scrollHeight >= height && leftHeight > 1000
@@ -246,10 +246,10 @@ export default function Profile({ getAllPosts }) {
                     <div className="profile_card">
                       <div className="profile_card_header">Intro</div>
                       <div className="sekelton_loader">
-                        <HashLoader color="#1876f2" />
+                        <HashLoader color="#ff5500" />
                       </div>
                     </div>
-                    <div className="profile_card">
+                    {/* <div className="profile_card">
                       <div className="profile_card_header">
                         Photos
                         <div className="profile_header_link">
@@ -270,7 +270,7 @@ export default function Profile({ getAllPosts }) {
                       <div className="sekelton_loader">
                         <HashLoader color="#1876f2" />
                       </div>
-                    </div>
+                    </div> */}
                   </>
                 ) : (
                   <>
@@ -279,15 +279,15 @@ export default function Profile({ getAllPosts }) {
                       visitor={visitor}
                       setOthername={setOthername}
                     />
-                    <Photos
+                    {/* <Photos
                       username={userName}
                       token={user.token}
                       photos={photos}
                     />
-                    <Friends friends={profile.friends} />
+                    <Friends friends={profile.friends} /> */}
                   </>
                 )}
-                <div className="relative_fb_copyright">
+                {/* <div className="relative_fb_copyright">
                   <Link to="/">Privacy </Link>
                   <span>. </span>
                   <Link to="/">Terms </Link>
@@ -302,16 +302,16 @@ export default function Profile({ getAllPosts }) {
                   <Link to="/">More </Link>
                   <span>. </span> <br />
                   Meta © 2022
-                </div>
+                </div> */}
               </div>
               <div className="profile_right">
                 {!visitor && (
                   <CreatePost user={user} profile setVisible={setVisible} />
                 )}
-                <GridPosts />
+                {/* <GridPosts /> */}
                 {loading ? (
                   <div className="sekelton_loader">
-                    <HashLoader color="#1876f2" />
+                    <HashLoader color="#ff5500" />
                   </div>
                 ) : (
                   <div className="posts">

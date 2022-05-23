@@ -65,7 +65,7 @@ export default function ImagePreview({
                 }}
               >
                 <i className="addPhoto_icon"></i>
-                Add Photos/Videos
+                Add another photos
               </button>
             </div>
             <div
@@ -117,8 +117,8 @@ export default function ImagePreview({
               <div className="add_circle">
                 <i className="addPhoto_icon"></i>
               </div>
-              <span>Add Photos/Videos</span>
-              <span>or drag and drop</span>
+              <span>Put your photos</span>
+              {/* <span>or drag and drop</span> */}
             </div>
           </div>
         )}
@@ -126,8 +126,8 @@ export default function ImagePreview({
           <div className="add_circle">
             <i className="phone_icon"></i>
           </div>
-          <div className="mobile_text">Add phots from your mobile device.</div>
-          <span className="addphone_btn">Add</span>
+          <div className="mobile_text">Add photos.</div>
+          <span className="addphone_btn">Click this</span>
         </div>
       </div>
     </div>

@@ -33,7 +33,7 @@ export default function Reset() {
   return (
     <div className="reset">
       <div className="reset_header">
-        <img src="../../../icons/facebook.svg" alt="" />
+        <img src="../../../icons/soundcloud.png" alt="" />
         {user ? (
           <div className="right_reset">
             <Link to="/profile">
@@ -50,7 +50,9 @@ export default function Reset() {
           </div>
         ) : (
           <Link to="/login" className="right_reset">
-            <button className="blue_btn">Login</button>
+            <button className="blue_btn" style={{ backgroundColor: "#ff5500" }}>
+              Login
+            </button>
           </Link>
         )}
       </div>

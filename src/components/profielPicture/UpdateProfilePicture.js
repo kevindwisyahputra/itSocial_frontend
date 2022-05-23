@@ -167,11 +167,16 @@ export default function UpdateProfilePicture({
         Your profile picture is public
       </div>
       <div className="update_submit_wrap">
-        <div className="blue_link" onClick={() => setImage("")}>
+        <div
+          className="blue_link blue_btn"
+          style={{ color: "white", backgroundColor: "#ff5500" }}
+          onClick={() => setImage("")}
+        >
           Cancel
         </div>
         <button
           className="blue_btn"
+          style={{ backgroundColor: "#ff5500" }}
           disabled={loading}
           onClick={() => updateProfielPicture()}
         >

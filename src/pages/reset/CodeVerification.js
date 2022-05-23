@@ -41,7 +41,7 @@ export default function CodeVerification({
     <div className="reset_form">
       <div className="reset_form_header">Code verification</div>
       <div className="reset_form_text">
-        Please enter code that been sent to your email.
+        Please enter code that been sent to your email
       </div>
       <Formik
         enableReinitialize
@@ -66,7 +66,11 @@ export default function CodeVerification({
               <Link to="/login" className="gray_btn">
                 Cancel
               </Link>
-              <button type="submit" className="blue_btn">
+              <button
+                type="submit"
+                className="blue_btn"
+                style={{ backgroundColor: "#ff5500" }}
+              >
                 Continue
               </button>
             </div>
